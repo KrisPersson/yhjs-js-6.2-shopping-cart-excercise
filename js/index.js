@@ -25,10 +25,9 @@ function listProductsInCart() {
     }
     document.getElementById('products').innerHTML = cartProducts; // Uppdatera DOMen med den nya varukorgen baserat på cartProducts.
 
-    const allDeleteBtns = document.querySelectorAll('.delete-btn')
 }
 
-function removeProduct(product) {                   // Funktionen som anropas när man klickar på att ta bort en produkt. Produkten har med sig samma argument som används som titel när den renderades.
+function removeProduct(product) {                   // Funktionen som anropas när man klickar på att ta bort en produkt. Produkten har med sig samma argument som användes som titel (shoppingCart[i]) när den renderades.
     for (let i = 0; i < shoppingCart.length; i++) { // För varje produkt i varukorgen,
         if (shoppingCart[i] === product) {          // om den produktens namn stämmer överens med namnet i argumentet (product),
             shoppingCart.splice(i, 1)               // ta bort den ur varukorgens array,
